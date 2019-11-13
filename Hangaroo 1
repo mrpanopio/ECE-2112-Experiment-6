@@ -1,0 +1,7 @@
+print('this function will return a boolean')
+print('True if the list of letters entered is in the secretWord, otherwise False') 
+def isWordGuessed (secretWord,lettersGuessed):
+    for l in secretWord:
+        if l not in lettersGuessed:
+            return False
+    return True
