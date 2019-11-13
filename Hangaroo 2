@@ -1,0 +1,10 @@
+print('This function will return a string that is composed of letters and underscores...')
+print('based on the letters guessed and mystery word')
+def getGuessedWord (secretWord,lettersGuessed):
+    words =[]
+    for l in secretWord:
+        if l in lettersGuessed:
+            words.append(l)
+        else:
+            words.append("_")
+    return "".join(words)
