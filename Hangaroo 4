@@ -1,0 +1,33 @@
+print('Let us Play Hangaroo!')
+print('Mechanics: Enter a letter to complete the mystery word...')
+print('before you lose your turns!')
+print('Note that each time you guess a wrong letter, a turn will be deducted.')
+def Hangaroo (secretWord):
+    print ("This word is consists of ", len(secretWord), " letters.")
+    mistakesMade = 0
+    lettersGuessed =[]
+    
+    while 6 - mistakesMade >0:
+        if isWordGuessed(secretWord, lettersGuessed)== True:
+            print('BAZINGAAA!' )
+            break
+        print('You only have ', 6 - mistakesMade,' turns left!')
+        print('Available letters: ', getAvailableLetters(lettersGuessed))
+        letter = str(input('Enter a letter: ')).lower()
+        if letter not in lettersGuessed:
+            lettersGuessed.append(letter)
+            if letter in secretWord:
+                print('Way to go! keep it coming!', getGuessedWord(secretWord,lettersGuessed))
+            else:
+                print('Woah! that letter is not included. Do not worry! you are doing your best!: ', getGuessedWord(secretWord,lettersGuessed))
+                lettersGuessed.append(letter)
+                mistakesMade += 1    
+        else:
+            print("that letter was already taken! ", getGuessedWord(secretWord,lettersGuessed))
+        
+        if 6 - mistakesMade ==0:
+            print('Thanks for playing!')
+            print('The mystery word is ',secretWord)
+            break
+        else:
+            continue
