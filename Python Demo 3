@@ -1,0 +1,54 @@
+//Experiment 6 - Demo no. 3
+
+print ('This program shows the value of a square key')
+print ('Choose from 1 to 15')
+num = (int(input("number: ")))
+sqr={
+   "1":"1",
+   "2":"4",
+   "3":"9",
+   "4":"16",
+   "5":"25",
+   "6":"36",
+   "7":"49",
+   "8":"64",
+   "9":"81",
+   "10":"100",
+   "11":"121",
+   "12":"144",
+   "13":"169",
+   "14":"196",
+   "15":"225"   
+   }
+if num==1:
+    print (sqr["1"])
+elif num==2:
+    print(sqr["2"])
+elif num==3:
+    print(sqr["3"])
+elif num==4:
+    print(sqr["4"])
+elif num==5:
+    print(sqr["5"])
+elif num==6:
+    print(sqr["6"])
+elif num==7:
+    print(sqr["7"])
+elif num==8:
+    print(sqr["8"])
+elif num==9:
+    print(sqr["9"])
+elif num==10:
+    print(sqr["10"])
+elif num==11:
+    print(sqr["11"])
+elif num==12:
+    print(sqr["12"])
+elif num==13:
+    print(sqr["13"])
+elif num==14:
+    print(sqr["14"])
+elif num==15:
+    print(sqr["15"])
+else:
+    print('Invalid input! Press F5 to try again!')
