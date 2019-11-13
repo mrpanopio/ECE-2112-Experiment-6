@@ -1,0 +1,10 @@
+print('This function will return a string that is composed of lowercase letters...')
+print('of the English alphabet that are not in letters Guessed.')
+def getAvailableLetters (lettersGuessed):
+    import string
+    l = string.ascii_lowercase
+    left =[]
+    for i in l :
+        if i not in lettersGuessed:
+            left.append(i)
+    return "".join(left)
